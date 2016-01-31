@@ -1,0 +1,44 @@
+----item----
+version: 1
+id: {F62E0F0A-B321-4379-B2FE-51FEE9B99D8A}
+database: master
+path: /sitecore/templates/User Defined/Demo Standard Rendering Parameters/__Standard Values
+parent: {8B64EBB3-0C3E-488C-A34A-1369FA2E8C36}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {8B64EBB3-0C3E-488C-A34A-1369FA2E8C36}
+templatekey: Demo Standard Rendering Parameters
+
+----version----
+language: en
+version: 1
+revision: b27b8ddc-ecb6-42e0-af78-24159dde1fa0
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160131T114103Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b27b8ddc-ecb6-42e0-af78-24159dde1fa0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160131T114103Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

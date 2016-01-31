@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {716829D7-1B0C-447C-90EC-C751B0F39BBA}
+database: master
+path: /sitecore/layout/Renderings/Demo/Generic/Body
+parent: {064F075E-1350-41BC-9603-8678FD5B6CE6}
+name: Body
+master: {00000000-0000-0000-0000-000000000000}
+template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
+templatekey: View rendering
+
+----field----
+field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
+name: Path
+key: path
+content-length: 26
+
+/Views/Generic/Body.cshtml
+----version----
+language: en
+version: 1
+revision: 8b320458-5538-419d-9a2f-91df50b77644
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160131T135334Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8b320458-5538-419d-9a2f-91df50b77644
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160131T135351Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

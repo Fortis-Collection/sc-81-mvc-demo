@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- For more information on using transformations 
+     see the web.config examples at http://go.microsoft.com/fwlink/?LinkId=214134. -->
+<connectionStrings xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <add name="core" connectionString="#{Sitecore.Core.Database.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="master" connectionString="#{Sitecore.Master.Database.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="web" connectionString="#{Sitecore.Web.Database.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="analytics" connectionString="#{Sitecore.Analytics.MongoDB.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="tracking.live" connectionString="#{Sitecore.Tracking.Live.MongoDB.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="tracking.history" connectionString="#{Sitecore.Tracking.History.MongoDB.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="tracking.contact" connectionString="#{Sitecore.Tracking.Contact.MongoDB.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+  <add name="reporting" connectionString="#{Sitecore.Reporting.Database.ConnectionString}" xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+</connectionStrings>

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+	@Html.Sitecore().Placeholder("metadata")
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/rocketcore.css">
+
+	<meta name="vs_defaultClientScript" content="JavaScript" />
+	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/rocketcore.js"></script>
+</head>
+<body>
+	<div id="outline">
+		<header role="banner" class="abs">
+			@Html.Sitecore().Placeholder("header")
+			<div class="container group">
+				<div class="gutter group">
+					<a href="/" title="" id="logo">
+						<img src="images/layout/logo.png" alt="Goblin Rocket Engineering Ltd" />
+					</a>
+					@Html.Sitecore().Placeholder("navigation")
+				</div>
+			</div>
+		</header>
+		<section id="home_hero">
+			@Html.Sitecore().Placeholder("hero")
+		</section>
+		<div role="main" class="group white_bg tb_pad">
+			<div class="container">
+				@Html.Sitecore().Placeholder("body")
+			</div>
+		</div>
+		<footer role="contentinfo">
+			@Html.Sitecore().Placeholder("footer")
+			<div class="container">
+				<div class="gutter group">
+					<div class="column c12">
+						<p class="copyright">&copy; 2016 Goblin Rocket Engineering Ltd</p>
+						<a href="http://www.goblinrockets.com" class="site_by" target="_blank" title="site by Goblin Rocket Engineering">site by Goblin Rocket Engineering</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+
+	var images;
+
+	$(window).load(function () {
+		$('.flexslider').flexslider({
+			namespace: "hero-",
+			selector: ".slides > .item",
+			directionNav: false
+		});
+	});
+	</script>
+
+</body>
+</html>

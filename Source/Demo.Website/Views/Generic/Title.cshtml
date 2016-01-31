@@ -1,0 +1,12 @@
+﻿@model IRenderingModel<IContentTitle, IContentTitle>
+@if (Model.RenderingItem != null)
+{
+	if (!String.IsNullOrEmpty(Model.RenderingItem.Title.RawValue))
+	{
+		<h1 class="heading">@Model.RenderingItem.Title</h1>
+	}
+	@*if (!String.IsNullOrEmpty(Model.RenderingItem.SubTitle.RawValue))
+	{
+		<p>@Model.RenderingItem.SubTitle</p>
+	}*@
+}
