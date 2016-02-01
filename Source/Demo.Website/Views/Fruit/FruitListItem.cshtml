@@ -1,0 +1,7 @@
+﻿@model IFruitListItemViewModel
+<tr>
+	<td>@Model.Name.Render(editing: false)</td>
+	<td>@Model.Image.Render(new { w = 50, h = 50 }, editing: false)</td>
+	<td>@Model.Colour.Render(editing: false)</td>
+	<td>@Model.Description.Render(editing: false)</td>
+</tr>

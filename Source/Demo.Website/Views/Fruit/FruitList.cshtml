@@ -1,0 +1,10 @@
+﻿@model IFruitListViewModel
+<table>
+	<tr>
+		<th>@Model.NameColumnHeaderText</th>
+		<th>@Model.ImageColumnHeaderText</th>
+		<th>@Model.ColourColumnHeaderText</th>
+		<th>@Model.DescriptionColumnHeaderText</th>
+	</tr>
+	@{ Model.Fruit.ForEach(f => Html.RenderPartial("FruitListItem", f)); }
+</table>

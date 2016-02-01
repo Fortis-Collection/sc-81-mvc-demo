@@ -88,8 +88,16 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.1.2\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SimpleInjector.Integration.Web, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
@@ -100,11 +108,20 @@
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SimpleInjector.Integration.WebApi, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.1.2\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\Libraries\Sitecore\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
       <HintPath>..\..\Libraries\Sitecore\Sitecore.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -115,6 +132,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -151,8 +176,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="WebApi\AbortSitecoreForKnownRoutes.cs" />
+    <Compile Include="WebApi\RegisterWebApiRoute.cs" />
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
+    <Compile Include="Controllers\FruitRepositoryController.cs" />
+    <Compile Include="Controllers\FruitController.cs" />
+    <Compile Include="Models\Fruit\CreateFruitRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Fruit\FruitListItemViewModel.cs" />
+    <Compile Include="ViewModels\Fruit\FruitListItemViewModelFactory.cs" />
+    <Compile Include="ViewModels\Fruit\FruitListViewModelFactory.cs" />
+    <Compile Include="ViewModels\Fruit\IFruitListItemViewModelFactory.cs" />
+    <Compile Include="ViewModels\Fruit\IFruitListViewModel.cs" />
+    <Compile Include="ViewModels\Fruit\FruitListViewModel.cs" />
+    <Compile Include="ViewModels\Fruit\IFruitListItemViewModel.cs" />
+    <Compile Include="ViewModels\Fruit\IFruitListViewModelFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\base.css" />
@@ -178,6 +217,7 @@
     <Content Include="App_Config\Include\UserDefined\Sites.config" />
     <Content Include="App_Config\Include\Fortis\Fortis.Mvc.config" />
     <Content Include="App_Config\Include\Fortis\Fortis.Search.Lucene.config" />
+    <Content Include="App_Config\Include\www.DEG.Shared.SC.EnableWebApi.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
     <Content Include="Views\Layouts\Desktop.cshtml" />
@@ -185,6 +225,11 @@
     <Content Include="Views\Generic\Body.cshtml" />
     <Content Include="Views\Generic\Image.cshtml" />
     <Content Include="Views\Generic\Title.cshtml" />
+    <Content Include="Views\Fruit\AllFruit.cshtml" />
+    <Content Include="Views\Fruit\TopFruit.cshtml" />
+    <Content Include="Views\Fruit\FruitList.cshtml" />
+    <Content Include="Views\Fruit\FruitListItem.cshtml" />
+    <Content Include="Views\Fruit\AddFruit.cshtml" />
     <None Include="Web.config.base" />
     <None Include="Web.config.Debug">
       <DependentUpon>Web.config.base</DependentUpon>
@@ -211,6 +256,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Demo.Fruit\Demo.Fruit.csproj">
+      <Project>{6ddf9f0c-fdc8-46d5-abf2-5cd9f4df1502}</Project>
+      <Name>Demo.Fruit</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Demo.Model\Demo.Model.csproj">
       <Project>{e4c3e190-4d3b-4658-8e3f-82e33427d278}</Project>
       <Name>Demo.Model</Name>

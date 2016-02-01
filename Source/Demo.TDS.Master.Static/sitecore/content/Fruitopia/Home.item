@@ -9,19 +9,25 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {FF55701A-0F87-482E-A66F-6D1EB75CAEA3}
 templatekey: Site Home
 
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 543
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{D134DB0D-BB05-4678-87CE-36F8BC28F064}" p:before="r[@uid='{E120A127-C2A9-4EC4-85AF-4D97933AB2C2}']" s:id="{8CDEA3FD-32B5-4F6E-9225-A48A74F74353}" s:ph="content" /><r uid="{E120A127-C2A9-4EC4-85AF-4D97933AB2C2}" p:before="r[@uid='{73FD7E03-2DDE-423A-8B1A-A6F3AC824840}']" s:id="{0DEAD32C-C005-468F-A508-75BE12ABE628}" s:ph="content" /><r uid="{73FD7E03-2DDE-423A-8B1A-A6F3AC824840}" s:id="{5E5E6878-7D28-4DB6-8F48-8725A1942B69}" s:ph="content" /></d></r>
 ----version----
 language: en
 version: 1
-revision: 8cbbc19f-65e7-4936-8e5a-f8caf7b35f76
+revision: b7633424-a0fe-47af-b7f8-7b17481f2c1c
 
 ----field----
-field: {5BB4F3AB-6E78-49A3-87D5-B966BD7C2029}
-name: Body
-key: body
-content-length: 88
+field: {935A5722-1CAE-4E5D-88EC-E492A8C7F814}
+name: Title
+key: title
+content-length: 10
 
-<p>Fruitopia is amazing!</p>
-<p>Listing all of the best fruit around, add your own. </p>
+Fruitopia!
 ----field----
 field: {1C58DBC0-AD8D-4454-946E-4B184E77F19A}
 name: Image
@@ -30,12 +36,13 @@ content-length: 58
 
 <image mediaid="{36D232C6-FE24-4C5A-9981-65965006F022}" />
 ----field----
-field: {935A5722-1CAE-4E5D-88EC-E492A8C7F814}
-name: Title
-key: title
-content-length: 10
+field: {5BB4F3AB-6E78-49A3-87D5-B966BD7C2029}
+name: Body
+key: body
+content-length: 88
 
-Fruitopia!
+<p>Fruitopia is amazing!</p>
+<p>Listing all of the best fruit around, add your own. </p>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8cbbc19f-65e7-4936-8e5a-f8caf7b35f76
+b7633424-a0fe-47af-b7f8-7b17481f2c1c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160131T140500Z
+20160201T171603Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

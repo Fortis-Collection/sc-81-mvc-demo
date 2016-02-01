@@ -257,7 +257,7 @@ private const string ClientTemplatePath = "/sitecore/templates/User Defined/";
 
 public string GetBaseTemplateInterface(bool isRenderingParametersTemplate)
 {
-	return InterfaceName(GetBaseTemplateClass(isRenderingParametersTemplate));
+	return "I" + TitleCase(GetBaseTemplateClass(isRenderingParametersTemplate));
 }
 
 public string GetBaseTemplateClass(bool isRenderingParametersTemplate)
@@ -446,12 +446,12 @@ public string GetFieldWrapperType(string typeName)
 
 public string ClassName(string name)
 {
-	return TitleCase(name);
+	return TitleCase(name) + "Item";
 }
 
 public string InterfaceName(string name)
 {
-	return "I" + TitleCase(name);
+	return "I" + TitleCase(name) + "Item";
 }
 
 public string TitleCase(string name)

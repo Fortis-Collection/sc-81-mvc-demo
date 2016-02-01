@@ -14,6 +14,10 @@ namespace Demo.Website.App_Start
 	using Fortis.Search;
 	using Fortis;
 	using Fortis.Mvc.Providers;
+	using ViewModels.Fruit;
+	using Fruit;
+	using System.Web.Http;
+	using SimpleInjector.Integration.WebApi;
 	public static class SimpleInjectorInitializer
     {
         /// <summary>Initialize the container and register it as MVC3 Dependency Resolver.</summary>
@@ -25,15 +29,27 @@ namespace Demo.Website.App_Start
             InitializeContainer(container);
 
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
-            
-            container.Verify();
+			container.RegisterWebApiControllers(GlobalConfiguration.Configuration, Assembly.GetExecutingAssembly());
+
+			InitializeFortis(container);
+
+			container.Verify();
             
             DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
-        }
+			GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
+		}
      
         private static void InitializeContainer(Container container)
         {
-			InitializeFortis(container);
+			InitializeFruit(container);
+		}
+
+		public static void InitializeFruit(Container container)
+		{
+			container.RegisterSingleton<IFruitsFactory, FruitsFactory>();
+			container.RegisterSingleton<IFruitItemRepository, FruitItemRepository>();
+			container.RegisterSingleton<IFruitListViewModelFactory, FruitListViewModelFactory>();
+			container.RegisterSingleton<IFruitListItemViewModelFactory, FruitListItemViewModelFactory>();
 		}
 
 		private static void InitializeFortis(Container container)
